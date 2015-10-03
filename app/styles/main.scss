@@ -3,6 +3,31 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+.maincontainer{
+  width:1000px;
+margin: 20px auto;
+text-align:left;
+}
+
+.logocontainer{
+margin:10px 0 10px 0;
+height:75px;
+//border:2px solid black;
+}
+
+.logo{
+
+  height:75px;
+  width:130px;
+  background:url('../images/guitarcenter.png') no-repeat;
+  float:left;
+}
+
+.logoheader{
+  //border:2px solid black;
+float:left;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -12,6 +37,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color: #9EA5AD;
+  color: #FBFBFB;
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
