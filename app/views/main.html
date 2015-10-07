@@ -1,2 +1,24 @@
 
  <slider images="images" />
+<h2>Product Information:</h2>
+<div class ="product_information" ng-repeat="image in images" ng-show="image.visible">
+<h3>Product Description:</h3>
+               <p>{{image.product_description}}</p>
+<h3>Price:</h3>
+                <p>${{image.price}}</p>
+<h3>In Stock:</h3>
+                <p ng-if="image.stock_availability==true">No of Items:{{image.no_of_items}}</p>
+                   <p ng-if="image.stock_availability==false">NO</p>
+  </div>
+
+  <h2>Shipping Information:</h2>
+<div class ="shipping_information" ng-repeat="image in images" ng-show="image.visible">
+<h3>Shipping Price:</h3>
+               <p>{{image.shipping_details | onlycurrency}}</p>
+</div>
+
+  <h2>Customer Review:</h2>
+<div class ="customer_review" ng-repeat="image in images" ng-show="image.visible">
+<h3>Review:</h3>
+               <p>{{image.customer_reviews}}</p>
+  </div>

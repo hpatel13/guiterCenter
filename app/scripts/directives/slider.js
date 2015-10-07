@@ -52,11 +52,12 @@ angular.module('guitercenterApp')
       scope.images.forEach(function(image){
         image.visible=false;
       });
+      console.log(scope.currentIndex);
       scope.images[scope.currentIndex].visible=true;
     });
         /* Start: For Automatic slideshow*/
 
-    var timer;
+    /*var timer;
 
     var sliderFunc=function(){
       timer=$timeout(function(){
@@ -70,7 +71,7 @@ angular.module('guitercenterApp')
     scope.$on('$destroy',function(){
       $timeout.cancel(timer);
     });
-
+*/
 
    /*End : For Automatic slideshow*/
       },   templateUrl :  'views/template/slidertemplate.html'
