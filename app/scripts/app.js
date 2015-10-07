@@ -11,7 +11,8 @@
 angular
   .module('guitercenterApp', [
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'ngAnimate'
   ])
   .config(function ($routeProvider) {
     $routeProvider
