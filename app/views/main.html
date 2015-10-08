@@ -1,5 +1,7 @@
-
+<div class="mainCont">
  <slider images="images" />
+ <br/>
+ <br/>
 <h2>Product Information:</h2>
 <div class ="product_information" ng-repeat="image in images" ng-show="image.visible">
 <h3>Product Description:</h3>
@@ -21,4 +23,11 @@
 <div class ="customer_review" ng-repeat="image in images" ng-show="image.visible">
 <h3>Review:</h3>
                <p>{{image.customer_reviews}}</p>
+                <a class="btn btn-default btn-lg" style="float:right;margin-right:200px;"    ng-click="buyThisProduct($index)">Buy</a>
   </div>
+  <div>
+  <br/>
+  <br/>
+
+  </div>
+</div>

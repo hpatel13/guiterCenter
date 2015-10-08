@@ -8,10 +8,6 @@
  * Controller of the guitercenterApp
  */
 angular.module('guitercenterApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function (shareddata,$scope) {
+    $scope.imageforthispage=shareddata.myindex;
   });
