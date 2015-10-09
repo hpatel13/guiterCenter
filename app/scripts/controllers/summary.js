@@ -8,10 +8,12 @@
  * Controller of the guitercenterApp
  */
 angular.module('guitercenterApp')
-  .controller('SummaryCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('SummaryCtrl', function (shareddata,$scope,summaryshare,$location) {
+     $scope.imageforsummarypage=shareddata.myindex;
+     $scope.summarypagefirstname=summaryshare.firstname;
+       $scope.summarypagelastname=summaryshare.lastname;
+         $scope.summarypageemail=summaryshare.email;
+         $scope.gotohome=function(){
+            $location.path('/home');
+         };
   });

@@ -1,6 +1,6 @@
 <div class="slider">
-  <div class="slide" ng-repeat="image in images" ng-show="image.visible">
-                <img class="image1" style="width: 100%;height: 100%;" ng-src="images/{{image.image_path}}" />
+  <div class="slide" ng-repeat="image in images" >
+                <img class="image1" ng-show="image.visible" style="width: 100%;height: 100%;" ng-src="images/{{image.image_path}}" />
   </div>
       <div class="arrows_prev">
           <a href="#/" ng-click="prev()">

@@ -2,8 +2,9 @@
  <slider images="images" />
  <br/>
  <br/>
-<h2>Product Information:</h2>
-<div class ="product_information" ng-repeat="image in images" ng-show="image.visible">
+<a ng-click="product_information=!product_information"><h2>Product Information:</h2></a>
+<div ng-hide="product_information">
+<div ng-repeat="image in images" ng-show="image.visible">
 <h3>Product Description:</h3>
                <p>{{image.product_description}}</p>
 <h3>Price:</h3>
@@ -12,22 +13,20 @@
                 <p ng-if="image.stock_availability==true">No of Items:{{image.no_of_items}}</p>
                    <p ng-if="image.stock_availability==false">NO</p>
   </div>
-
-  <h2>Shipping Information:</h2>
-<div class ="shipping_information" ng-repeat="image in images" ng-show="image.visible">
+</div>
+ <a ng-click="shipping_information=!shipping_information"><h2>Shipping Information:</h2></a>
+<div ng-hide="shipping_information">
+<div ng-repeat="image in images" ng-show="image.visible">
 <h3>Shipping Price:</h3>
                <p>{{image.shipping_details | onlycurrency}}</p>
 </div>
-
-  <h2>Customer Review:</h2>
-<div class ="customer_review" ng-repeat="image in images" ng-show="image.visible">
+</div>
+ <a ng-click="customer_review=!customer_review"> <h2>Customer Review:</h2></a>
+ <div ng-hide="customer_review">
+<div  ng-repeat="image in images" ng-show="image.visible">
 <h3>Review:</h3>
                <p>{{image.customer_reviews}}</p>
                 <a class="btn btn-default btn-lg" style="float:right;margin-right:200px;"    ng-click="buyThisProduct($index)">Buy</a>
   </div>
-  <div>
-  <br/>
-  <br/>
-
   </div>
 </div>
