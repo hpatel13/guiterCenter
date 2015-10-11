@@ -37,6 +37,6 @@
                <p>{{image.customer_reviews}}</p>
 
   </div>
-   <a class="btn btn-primary" style="float:right;margin-right:20px;"    ng-click="buyThisProduct($index)">Buy This Product</a>
+   <a class="btn btn-primary" style="float:right;margin-right:20px;"    ng-click="buyThisProduct($index)" ng-disabled="image.stock_availability!=true">Buy This Product</a>
 </div>
 </div>

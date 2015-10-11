@@ -17,9 +17,6 @@
       <label for="inputFirstName" class="control-label">First Name:</label>
 
         <input ng-model="firstname" name="firstname" class="form-control" placeholder="First Name" type="text" ng-minlength="3" ng-maxlength="20" required />
-        <span class="error" ng-show="pruchaseDetails.firstname.$error.required">
-        Your name is required.<br/>
-        </span>
         <span class="error" ng-show="pruchaseDetails.firstname.$error.minlength">
         Your name should be atleast 3 characters.<br/>
         </span>
@@ -29,9 +26,7 @@
       <label for="inputLastName" class="control-label">Last Name:</label>
 
         <input ng-model="lastname" name="lastname" class="form-control" placeholder="Last Name" type="text" ng-minlength="3" ng-maxlength="20" required/>
-        <span class="error" ng-show="pruchaseDetails.lastname.$error.required">
-        Your name is required.<br/>
-        </span>
+
         <span class="error" ng-show="pruchaseDetails.lastname.$error.minlength">
         Your last name should be atleast 3 characters.<br/>
         </span>
@@ -44,21 +39,17 @@
        <span class="error" ng-show="pruchaseDetails.email.$error.pattern">
         Please provide the correct email address.<br/>
         </span>
-         <span class="error" ng-show="pruchaseDetails.email.$error.required">
-        Your Email address is required.<br/>
-        </span>
+
       <label for="inputCreditCard" class="control-label">Credit Card:</label>
 
         <input ng-model="creditcard" name="creditcard" class="form-control" placeholder="Credit Card" type="number" ng-minlength="14" ng-maxlength="16"
         required>
 
-        <span class="error" ng-show="pruchaseDetails.creditcard.$error.required">
-        Please provide your creditcard number.<br/>
-        </span>
+
         <span class="error" ng-show="pruchaseDetails.creditcard.$error.minlength">
         Your Credit Card number should be 14-16 Digits.<br/>
         </span>
-        <span class="error" ng-show="pruchaseDetails.creditcard.$error.minlength">
+        <span class="error" ng-show="pruchaseDetails.creditcard.$error.maxlength">
         Your Credit Card number cannot be more than 16 numbers.<br/>
         </span>
         <br/>
@@ -78,6 +69,4 @@
      <button ng-click="buyfinally()" style="float:right;" class="btn btn-primary">Buy</button>
   <button ng-click="edit()" style="float:right;margin-right:10px;" class="btn btn-primary">Edit</button>
     </div>
-
-
 </div>

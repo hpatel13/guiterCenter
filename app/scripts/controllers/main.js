@@ -9,7 +9,7 @@
  */
 angular.module('guitercenterApp')
   .controller('MainCtrl', function ($scope,$http,$location,shareddata) {
-    $scope.product_information="false";
+      $scope.product_information="false";
     $scope.shipping_information="false";
     $scope.customer_review="false";
      $scope.images=[];
