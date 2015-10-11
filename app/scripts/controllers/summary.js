@@ -13,6 +13,8 @@ angular.module('guitercenterApp')
      $scope.summarypagefirstname=summaryshare.firstname;
        $scope.summarypagelastname=summaryshare.lastname;
          $scope.summarypageemail=summaryshare.email;
+         $scope.shippingprice =  $scope.imageforsummarypage.shipping_details.split('$');
+         $scope.totalprice=parseInt($scope.shippingprice[1]) + $scope.imageforsummarypage.price;
          $scope.gotohome=function(){
             $location.path('/home');
          };

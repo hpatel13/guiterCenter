@@ -18,9 +18,15 @@ angular.module('guitercenterApp')
       $location.path('/summary');
     };
 
-    $scope.clickme = function(){
+    $scope.gotoreview = function(){
          $scope.showme=true;
          $scope.pruchase=false;
 
     };
+    $scope.edit = function(){
+         $scope.showme=false;
+         $scope.pruchase=true;
+
+    };
+
   });

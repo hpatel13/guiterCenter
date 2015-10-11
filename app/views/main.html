@@ -2,9 +2,14 @@
  <slider images="images" />
  <br/>
  <br/>
-<a ng-click="product_information=!product_information"><h2>Product Information:</h2></a>
-<div ng-hide="product_information">
-<div ng-repeat="image in images" ng-show="image.visible">
+ <div ng-repeat="image in images" ng-show="image.visible" style="float:left;">
+<a ng-click="product_information=!product_information"><h2 style="float:left;" >Product Information:</h2>
+<h2 style="float:right;margin-right:10px;" ng-if="product_information">+</h2>
+<h2 style="float:right;margin-right:10px;" ng-if="!product_information">-</h2>
+</a>
+<hr style="float:left;width:970px">
+<div ng-hide="product_information" style="float:left;width:970px" >
+
 <h3>Product Description:</h3>
                <p>{{image.product_description}}</p>
 <h3>Price:</h3>
@@ -13,20 +18,25 @@
                 <p ng-if="image.stock_availability==true">No of Items:{{image.no_of_items}}</p>
                    <p ng-if="image.stock_availability==false">NO</p>
   </div>
-</div>
- <a ng-click="shipping_information=!shipping_information"><h2>Shipping Information:</h2></a>
-<div ng-hide="shipping_information">
-<div ng-repeat="image in images" ng-show="image.visible">
-<h3>Shipping Price:</h3>
+
+ <a ng-click="shipping_information=!shipping_information"><h2 style="float:left;">Shipping Information:</h2>
+ <h2 style="float:right;margin-right:10px;" ng-if="shipping_information">+</h2>
+<h2 style="float:right;margin-right:10px;" ng-if="!shipping_information">-</h2>
+ </a>
+ <hr style="float:left;width:970px">
+<div ng-hide="shipping_information" style="float:left;">
                <p>{{image.shipping_details | onlycurrency}}</p>
+
 </div>
-</div>
- <a ng-click="customer_review=!customer_review"> <h2>Customer Review:</h2></a>
- <div ng-hide="customer_review">
-<div  ng-repeat="image in images" ng-show="image.visible">
-<h3>Review:</h3>
+ <a ng-click="customer_review=!customer_review" style="float:left;width:970px"> <h2 style="float:left;">Customer Review:</h2>
+ <h2 style="float:right;margin-right:10px;" ng-if="customer_review">+</h2>
+<h2 style="float:right;margin-right:10px;" ng-if="!customer_review">-</h2>
+ </a>
+ <hr style="float:left;width:970px">
+ <div ng-hide="customer_review" style="float:left;">
                <p>{{image.customer_reviews}}</p>
-                <a class="btn btn-default btn-lg" style="float:right;margin-right:200px;"    ng-click="buyThisProduct($index)">Buy</a>
+
   </div>
-  </div>
+   <a class="btn btn-primary" style="float:right;margin-right:20px;"    ng-click="buyThisProduct($index)">Buy This Product</a>
+</div>
 </div>
